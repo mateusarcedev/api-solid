@@ -4,7 +4,7 @@
 2. [x] Definindo requisitos e regras
 3. [x] Criando projeto Node.js
 4. [x] Usando versões exatas do NPM
-5. [ ] Carregando variáveis ambiente
+5. [x] Carregando variáveis ambiente
 6. [ ] Configurando ESLint
 7. [ ] Criando aliases de importação
 8. [ ] Fundamentos do Prisma ORM
