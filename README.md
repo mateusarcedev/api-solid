@@ -7,12 +7,12 @@
 5. [x] Carregando variáveis ambiente
 6. [x] Configurando ESLint
 7. [x] Criando aliases de importação
-8. [ ] Fundamentos do Prisma ORM
-9. [ ] Fundamentos do Docker
-10. [ ] PostgreSQL com Docker
-11. [ ] Utilizando o Docker Compose
-12. [ ] Criando schema do Prisma
-13. [ ] Relacionamentos entre tabelas
+8. [x] Fundamentos do Prisma ORM
+9. [x] Fundamentos do Docker
+10. [x] PostgreSQL com Docker
+11. [x] Utilizando o Docker Compose
+12. [x] Criando schema do Prisma
+13. [x] Relacionamentos entre tabelas
 14. [ ] Criação de um usuário
 15. [ ] Controller de registro
 16. [ ] Hash da senha e validação
