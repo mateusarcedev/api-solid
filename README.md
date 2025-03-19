@@ -5,8 +5,8 @@
 3. [x] Criando projeto Node.js
 4. [x] Usando versões exatas do NPM
 5. [x] Carregando variáveis ambiente
-6. [ ] Configurando ESLint
-7. [ ] Criando aliases de importação
+6. [x] Configurando ESLint
+7. [x] Criando aliases de importação
 8. [ ] Fundamentos do Prisma ORM
 9. [ ] Fundamentos do Docker
 10. [ ] PostgreSQL com Docker
