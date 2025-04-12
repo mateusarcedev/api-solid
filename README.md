@@ -16,7 +16,7 @@
 14. [x] Criação de um usuário
 15. [x] Controller de registro
 16. [x] Hash da senha e validação
-17. [ ] Caso de uso de registro
+17. [x] Caso de uso de registro
 18. [ ] Repository Pattern
 19. [ ] Inversão de dependências
 20. [ ] Interface do repositório
