@@ -13,9 +13,9 @@
 11. [x] Utilizando o Docker Compose
 12. [x] Criando schema do Prisma
 13. [x] Relacionamentos entre tabelas
-14. [ ] Criação de um usuário
-15. [ ] Controller de registro
-16. [ ] Hash da senha e validação
+14. [x] Criação de um usuário
+15. [x] Controller de registro
+16. [x] Hash da senha e validação
 17. [ ] Caso de uso de registro
 18. [ ] Repository Pattern
 19. [ ] Inversão de dependências
