@@ -18,7 +18,7 @@
 16. [x] Hash da senha e validação
 17. [x] Caso de uso de registro
 18. [x] Repository Pattern
-19. [ ] Inversão de dependências
+19. [x] Inversão de dependências
 20. [ ] Interface do repositório
 21. [ ] Lidando com erros do use case
 22. [ ] Handler de erros global
