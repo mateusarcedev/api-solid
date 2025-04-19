@@ -20,7 +20,7 @@
 18. [x] Repository Pattern
 19. [x] Inversão de dependências
 20. [x] Interface do repositório
-21. [ ] Lidando com erros do use case
+21. [x] Lidando com erros do use case
 22. [ ] Handler de erros global
 23. [ ] Configurando Vitest
 24. [ ] Primeiro teste unitário
