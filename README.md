@@ -24,7 +24,7 @@
 22. [x] Handler de erros global
 23. [x] Configurando Vitest
 24. [x] Primeiro teste unitário
-25. [ ] In-Memory Databases
+25. [x] In-Memory Databases
 26. [ ] Gerando coverage de testes
 27. [ ] Utilizando UI do Vitest
 28. [ ] Caso de uso de autenticação
