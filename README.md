@@ -28,7 +28,7 @@
 26. [x] Gerando coverage de testes
 27. [x] Utilizando UI do Vitest
 28. [x] Caso de uso de autenticação
-29. [ ] Testes e controller de autenticação
+29. [x] Testes e controller de autenticação
 30. [ ] Refatorando instâncias nos testes
 31. [ ] Utilizando Factory Pattern
 32. [ ] Caso de uso de perfil
