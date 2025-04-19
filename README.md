@@ -1,96 +1,137 @@
-# To-Do List
+# Gym Check-In App
 
-1. [x] Introdução
-2. [x] Definindo requisitos e regras
-3. [x] Criando projeto Node.js
-4. [x] Usando versões exatas do NPM
-5. [x] Carregando variáveis ambiente
-6. [x] Configurando ESLint
-7. [x] Criando aliases de importação
-8. [x] Fundamentos do Prisma ORM
-9. [x] Fundamentos do Docker
-10. [x] PostgreSQL com Docker
-11. [x] Utilizando o Docker Compose
-12. [x] Criando schema do Prisma
-13. [x] Relacionamentos entre tabelas
-14. [x] Criação de um usuário
-15. [x] Controller de registro
-16. [x] Hash da senha e validação
-17. [x] Caso de uso de registro
-18. [x] Repository Pattern
-19. [x] Inversão de dependências
-20. [x] Interface do repositório
-21. [x] Lidando com erros do use case
-22. [x] Handler de erros global
-23. [x] Configurando Vitest
-24. [x] Primeiro teste unitário
-25. [x] In-Memory Databases
-26. [x] Gerando coverage de testes
-27. [x] Utilizando UI do Vitest
-28. [x] Caso de uso de autenticação
-29. [x] Testes e controller de autenticação
-30. [x] Refatorando instâncias nos testes
-31. [ ] Utilizando Factory Pattern
-32. [ ] Caso de uso de perfil
-33. [ ] Caso de uso de check-in
-34. [ ] TDD & Mocking
-35. [ ] Validando data do check-in
-36. [ ] Validando distância do check-in
-37. [ ] Caso de uso de criação de academia
-38. [ ] Caso de uso de histórico
-39. [ ] Caso de uso de métricas
-40. [ ] Caso de uso de busca de academias
-41. [ ] Caso de uso de academias próximas
-42. [ ] Caso de uso de validar check-in
-43. [ ] Validando horário do check-in
-44. [ ] Repositórios do Prisma
-45. [ ] Repositório de academias
-46. [ ] Factories dos casos de uso
-47. [ ] Princípios da autenticação JWT
-48. [ ] Implementando JWT no Fastify
-49. [ ] Controller de perfil
-50. [ ] Criando test environment
-51. [ ] Organizando NPM scripts
-52. [ ] Test Environment do Prisma
-53. [ ] Teste E2E do registro
-54. [ ] Teste E2E da autenticação
-55. [ ] Teste E2E do perfil
-56. [ ] Controller de criação de academia
-57. [ ] Outros controllers da academia
-58. [ ] Controllers das rotas de check-ins
-59. [ ] Testes E2E de rotas de academias
-60. [ ] Testes E2E de rotas de check-ins
-61. [ ] Estratégia de refresh de token
-62. [ ] Implementação do refresh token
-63. [ ] Autorização por cargos (RBAC)
-64. [ ] Testes de RBAC
-65. [ ] Executando testes unitários no CI
-66. [ ] Executando testes E2E no CI
+<details>
+  <summary>🇧🇷 Português (pt-BR)</summary>
 
+## 📌 Sobre o Projeto
 
-## Requisitos Funcionanis
-- [ ] Deve ser possível se cadastrar;
-- [ ] Deve ser possível se autenticar;
-- [ ] Deve ser possível obter o perfil de um usuário logado;
-- [ ] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
-- [ ] Deve ser possível o usuário obter seu histórico de check-ins;
-- [ ] Deve ser possível o usuário buscar academias próximas;
-- [ ] Deve ser possível o usuário buscar academias pelo nome;
-- [ ] Deve ser possível o usuário realizar check-in em uma academia;
-- [ ] Deve ser possível validar o check-in de um usuário;
-- [ ] Deve ser possível cadastrar uma academia.
+Este projeto foi desenvolvido durante um curso da [Rocketseat](https://www.rocketseat.com.br/), com o objetivo de criar uma aplicação de check-ins em academias. Ao longo do projeto, são aplicados conceitos como:
 
-## Regras de negócio
-- [ ] O usuário não deve poder se cadastrar com um email duplicado;
-- [ ] O usuário não pode fazer 2 check-ins no mesmo dia;
-- [ ] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
-- [ ] O check-in só pode ser validado até 20 minutos após criado;
-- [ ] O check-in só pode ser validado por administradores;
-- [ ] A academia só pode ser criada por administradores.
+- SOLID
+- Design Patterns (como Factory Pattern e Repository Pattern)
+- Docker e Docker Compose para orquestração do ambiente
+- Prisma ORM para manipulação do banco de dados PostgreSQL
+- JWT e Refresh Token para autenticação
+- RBAC (Role-Based Access Control) para autorização
+- Testes unitários e E2E com Vitest
+- TDD e Mocking
+- Clean Architecture
 
+---
 
-## Requisitos não funcionais
-- [ ] A senha do usuário precisa estar criptografada;
-- [ ] Os dados da aplicação precisam estar persistidos em um banco de dados Postgresql;
-- [ ] Todas as listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por JWT (Json Web Token).
+## ✅ Funcionalidades
+
+- [ ] Cadastro de usuário
+- [ ] Autenticação de usuário
+- [ ] Visualização de perfil de usuário logado
+- [ ] Visualização do número de check-ins realizados
+- [ ] Histórico de check-ins
+- [ ] Busca por academias próximas
+- [ ] Busca por academias por nome
+- [ ] Realizar check-in em uma academia
+- [ ] Validação de check-in de usuários
+- [ ] Cadastro de academias
+
+---
+
+## 📜 Regras de Negócio
+
+- [ ] Não é permitido cadastro com e-mail duplicado
+- [ ] Apenas um check-in por dia por usuário
+- [ ] Check-in apenas se estiver a até 100m da academia
+- [ ] Validação do check-in em até 20 minutos após a criação
+- [ ] Apenas administradores podem validar check-ins
+- [ ] Apenas administradores podem cadastrar academias
+
+---
+
+## 🛠 Requisitos Não Funcionais
+
+- [ ] Senhas criptografadas
+- [ ] Persistência de dados com PostgreSQL
+- [ ] Listagens paginadas com 20 itens por página
+- [ ] Autenticação via JWT
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- Node.js
+- Fastify
+- PostgreSQL
+- Prisma ORM
+- Docker / Docker Compose
+- JWT
+- Vitest
+- TypeScript
+
+</details>
+
+---
+
+<details>
+  <summary>🇺🇸 English (en-US)</summary>
+
+## 📌 About the Project
+
+This project was developed during a [Rocketseat](https://www.rocketseat.com.br/) course. The goal is to create a gym check-in application. Throughout the course, several concepts are put into practice, such as:
+
+- SOLID principles
+- Design Patterns (like Factory Pattern and Repository Pattern)
+- Docker and Docker Compose for environment setup
+- Prisma ORM to interact with a PostgreSQL database
+- JWT and Refresh Token for authentication
+- RBAC (Role-Based Access Control) for authorization
+- Unit and E2E tests with Vitest
+- TDD and Mocking
+- Clean Architecture
+
+---
+
+## ✅ Features
+
+- [ ] User registration
+- [ ] User authentication
+- [ ] View logged-in user profile
+- [ ] View total number of check-ins
+- [ ] View check-in history
+- [ ] Search gyms nearby
+- [ ] Search gyms by name
+- [ ] Perform a gym check-in
+- [ ] Validate user check-ins
+- [ ] Register gyms
+
+---
+
+## 📜 Business Rules
+
+- [ ] Users cannot register with duplicate emails
+- [ ] Only one check-in per day per user
+- [ ] Check-ins allowed only within 100 meters of the gym
+- [ ] Check-in must be validated within 20 minutes
+- [ ] Only admins can validate check-ins
+- [ ] Only admins can register gyms
+
+---
+
+## 🛠 Non-Functional Requirements
+
+- [ ] Encrypted passwords
+- [ ] Data persistence using PostgreSQL
+- [ ] Pagination with 20 items per page
+- [ ] JWT authentication
+
+---
+
+## 🚀 Tech Stack
+
+- Node.js
+- Fastify
+- PostgreSQL
+- Prisma ORM
+- Docker / Docker Compose
+- JWT
+- Vitest
+- TypeScript
+
+</details>
