@@ -22,7 +22,7 @@
 20. [x] Interface do repositório
 21. [x] Lidando com erros do use case
 22. [x] Handler de erros global
-23. [ ] Configurando Vitest
+23. [x] Configurando Vitest
 24. [ ] Primeiro teste unitário
 25. [ ] In-Memory Databases
 26. [ ] Gerando coverage de testes
