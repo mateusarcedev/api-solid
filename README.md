@@ -23,7 +23,7 @@
 21. [x] Lidando com erros do use case
 22. [x] Handler de erros global
 23. [x] Configurando Vitest
-24. [ ] Primeiro teste unitário
+24. [x] Primeiro teste unitário
 25. [ ] In-Memory Databases
 26. [ ] Gerando coverage de testes
 27. [ ] Utilizando UI do Vitest
