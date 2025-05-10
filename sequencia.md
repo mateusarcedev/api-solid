@@ -32,7 +32,7 @@
 30. [x] Refatorando instâncias nos testes
 31. [x] Utilizando Factory Pattern
 32. [x] Caso de uso de perfil
-33. [ ] Caso de uso de check-in
+33. [x] Caso de uso de check-in
 34. [ ] TDD & Mocking
 35. [ ] Validando data do check-in
 36. [ ] Validando distância do check-in
