@@ -31,7 +31,7 @@
 29. [x] Testes e controller de autenticação
 30. [x] Refatorando instâncias nos testes
 31. [x] Utilizando Factory Pattern
-32. [ ] Caso de uso de perfil
+32. [x] Caso de uso de perfil
 33. [ ] Caso de uso de check-in
 34. [ ] TDD & Mocking
 35. [ ] Validando data do check-in
