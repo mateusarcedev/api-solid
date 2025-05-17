@@ -38,7 +38,7 @@
 36. [x] Validando distância do check-in
 37. [x] Caso de uso de criação de academia
 38. [x] Caso de uso de histórico
-39. [ ] Caso de uso de métricas
+39. [x] Caso de uso de métricas
 40. [ ] Caso de uso de busca de academias
 41. [ ] Caso de uso de academias próximas
 42. [ ] Caso de uso de validar check-in
