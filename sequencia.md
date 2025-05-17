@@ -33,9 +33,9 @@
 31. [x] Utilizando Factory Pattern
 32. [x] Caso de uso de perfil
 33. [x] Caso de uso de check-in
-34. [ ] TDD & Mocking
-35. [ ] Validando data do check-in
-36. [ ] Validando distância do check-in
+34. [x] TDD & Mocking
+35. [x] Validando data do check-in
+36. [x] Validando distância do check-in
 37. [ ] Caso de uso de criação de academia
 38. [ ] Caso de uso de histórico
 39. [ ] Caso de uso de métricas
@@ -67,8 +67,8 @@
 65. [ ] Executando testes unitários no CI
 66. [ ] Executando testes E2E no CI
 
-
 ## Requisitos Funcionanis
+
 - [ ] Deve ser possível se cadastrar;
 - [ ] Deve ser possível se autenticar;
 - [ ] Deve ser possível obter o perfil de um usuário logado;
@@ -81,6 +81,7 @@
 - [ ] Deve ser possível cadastrar uma academia.
 
 ## Regras de negócio
+
 - [ ] O usuário não deve poder se cadastrar com um email duplicado;
 - [ ] O usuário não pode fazer 2 check-ins no mesmo dia;
 - [ ] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
@@ -88,8 +89,8 @@
 - [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser criada por administradores.
 
-
 ## Requisitos não funcionais
+
 - [ ] A senha do usuário precisa estar criptografada;
 - [ ] Os dados da aplicação precisam estar persistidos em um banco de dados Postgresql;
 - [ ] Todas as listas de dados precisam estar paginadas com 20 itens por página;
