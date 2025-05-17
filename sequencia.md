@@ -40,7 +40,7 @@
 38. [x] Caso de uso de histórico
 39. [x] Caso de uso de métricas
 40. [x] Caso de uso de busca de academias
-41. [ ] Caso de uso de academias próximas
+41. [x] Caso de uso de academias próximas
 42. [ ] Caso de uso de validar check-in
 43. [ ] Validando horário do check-in
 44. [ ] Repositórios do Prisma
