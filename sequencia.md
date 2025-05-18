@@ -47,7 +47,7 @@
 45. [x] Repositório de academias
 46. [x] Factories dos casos de uso
 47. [x] Princípios da autenticação JWT
-48. [ ] Implementando JWT no Fastify
+48. [x] Implementando JWT no Fastify
 49. [ ] Controller de perfil
 50. [ ] Criando test environment
 51. [ ] Organizando NPM scripts
