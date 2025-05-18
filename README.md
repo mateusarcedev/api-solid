@@ -21,7 +21,7 @@ Este projeto foi desenvolvido durante um curso da [Rocketseat](https://www.rocke
 
 ## ✅ Funcionalidades
 
-- [ ] Cadastro de usuário
+- ✅ Cadastro de usuário
 - [ ] Autenticação de usuário
 - [ ] Visualização de perfil de usuário logado
 - [ ] Visualização do número de check-ins realizados
