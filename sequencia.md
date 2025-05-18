@@ -48,7 +48,7 @@
 46. [x] Factories dos casos de uso
 47. [x] Princípios da autenticação JWT
 48. [x] Implementando JWT no Fastify
-49. [ ] Controller de perfil
+49. [x] Controller de perfil
 50. [ ] Criando test environment
 51. [ ] Organizando NPM scripts
 52. [ ] Test Environment do Prisma
