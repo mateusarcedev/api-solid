@@ -49,7 +49,7 @@
 47. [x] Princípios da autenticação JWT
 48. [x] Implementando JWT no Fastify
 49. [x] Controller de perfil
-50. [ ] Criando test environment
+50. [x] Criando test environment
 51. [ ] Organizando NPM scripts
 52. [ ] Test Environment do Prisma
 53. [ ] Teste E2E do registro
