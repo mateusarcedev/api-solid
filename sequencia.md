@@ -50,22 +50,21 @@
 48. [x] Implementando JWT no Fastify
 49. [x] Controller de perfil
 50. [x] Criando test environment
-51. [ ] Organizando NPM scripts
-52. [ ] Test Environment do Prisma
-53. [ ] Teste E2E do registro
-54. [ ] Teste E2E da autenticação
-55. [ ] Teste E2E do perfil
-56. [ ] Controller de criação de academia
-57. [ ] Outros controllers da academia
-58. [ ] Controllers das rotas de check-ins
-59. [ ] Testes E2E de rotas de academias
-60. [ ] Testes E2E de rotas de check-ins
-61. [ ] Estratégia de refresh de token
-62. [ ] Implementação do refresh token
-63. [ ] Autorização por cargos (RBAC)
-64. [ ] Testes de RBAC
-65. [ ] Executando testes unitários no CI
-66. [ ] Executando testes E2E no CI
+51. [x] Test Environment do Prisma
+52. [x] Teste E2E do registro
+53. [x] Teste E2E da autenticação
+54. [x] Teste E2E do perfil
+55. [ ] Controller de criação de academia
+56. [ ] Outros controllers da academia
+57. [ ] Controllers das rotas de check-ins
+58. [ ] Testes E2E de rotas de academias
+59. [ ] Testes E2E de rotas de check-ins
+60. [ ] Estratégia de refresh de token
+61. [ ] Implementação do refresh token
+62. [ ] Autorização por cargos (RBAC)
+63. [ ] Testes de RBAC
+64. [ ] Executando testes unitários no CI
+65. [ ] Executando testes E2E no CI
 
 ## Requisitos Funcionanis
 
