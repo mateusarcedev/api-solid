@@ -54,7 +54,7 @@
 52. [x] Teste E2E do registro
 53. [x] Teste E2E da autenticação
 54. [x] Teste E2E do perfil
-55. [ ] Controller de criação de academia
+55. [x] Controller de criação de academia
 56. [ ] Outros controllers da academia
 57. [ ] Controllers das rotas de check-ins
 58. [ ] Testes E2E de rotas de academias
