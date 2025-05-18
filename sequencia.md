@@ -45,7 +45,7 @@
 43. [x] Validando horário do check-in
 44. [x] Repositórios do Prisma
 45. [x] Repositório de academias
-46. [ ] Factories dos casos de uso
+46. [x] Factories dos casos de uso
 47. [ ] Princípios da autenticação JWT
 48. [ ] Implementando JWT no Fastify
 49. [ ] Controller de perfil
