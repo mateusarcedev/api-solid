@@ -22,35 +22,35 @@ Este projeto foi desenvolvido durante um curso da [Rocketseat](https://www.rocke
 ## ✅ Funcionalidades
 
 - ✅ Cadastro de usuário
-- [ ] Autenticação de usuário
-- [ ] Visualização de perfil de usuário logado
-- [ ] Visualização do número de check-ins realizados
-- [ ] Histórico de check-ins
-- [ ] Busca por academias próximas
-- [ ] Busca por academias por nome
-- [ ] Realizar check-in em uma academia
-- [ ] Validação de check-in de usuários
-- [ ] Cadastro de academias
+- ✅ Autenticação de usuário
+- ✅ Visualização de perfil de usuário logado
+- ✅ Visualização do número de check-ins realizados
+- ✅ Histórico de check-ins
+- ✅ Busca por academias próximas
+- ✅ Busca por academias por nome
+- ✅ Realizar check-in em uma academia
+- ✅ Validação de check-in de usuários
+- ✅ Cadastro de academias
 
 ---
 
 ## 📜 Regras de Negócio
 
-- [ ] Não é permitido cadastro com e-mail duplicado
-- [ ] Apenas um check-in por dia por usuário
-- [ ] Check-in apenas se estiver a até 100m da academia
-- [ ] Validação do check-in em até 20 minutos após a criação
-- [ ] Apenas administradores podem validar check-ins
-- [ ] Apenas administradores podem cadastrar academias
+- ✅ Não é permitido cadastro com e-mail duplicado
+- ✅ Apenas um check-in por dia por usuário
+- ✅ Check-in apenas se estiver a até 100m da academia
+- ✅ Validação do check-in em até 20 minutos após a criação
+- ✅ Apenas administradores podem validar check-ins
+- ✅ Apenas administradores podem cadastrar academias
 
 ---
 
 ## 🛠 Requisitos Não Funcionais
 
-- [ ] Senhas criptografadas
-- [ ] Persistência de dados com PostgreSQL
-- [ ] Listagens paginadas com 20 itens por página
-- [ ] Autenticação via JWT
+- ✅ Senhas criptografadas
+- ✅ Persistência de dados com PostgreSQL
+- ✅ Listagens paginadas com 20 itens por página
+- ✅ Autenticação via JWT
 
 ---
 
@@ -90,36 +90,36 @@ This project was developed during a [Rocketseat](https://www.rocketseat.com.br/)
 
 ## ✅ Features
 
-- [ ] User registration
-- [ ] User authentication
-- [ ] View logged-in user profile
-- [ ] View total number of check-ins
-- [ ] View check-in history
-- [ ] Search gyms nearby
-- [ ] Search gyms by name
-- [ ] Perform a gym check-in
-- [ ] Validate user check-ins
-- [ ] Register gyms
+- ✅ User registration
+- ✅ User authentication
+- ✅ View logged-in user profile
+- ✅ View total number of check-ins
+- ✅ View check-in history
+- ✅ Search gyms nearby
+- ✅ Search gyms by name
+- ✅ Perform a gym check-in
+- ✅ Validate user check-ins
+- ✅ Register gyms
 
 ---
 
 ## 📜 Business Rules
 
-- [ ] Users cannot register with duplicate emails
-- [ ] Only one check-in per day per user
-- [ ] Check-ins allowed only within 100 meters of the gym
-- [ ] Check-in must be validated within 20 minutes
-- [ ] Only admins can validate check-ins
-- [ ] Only admins can register gyms
+- ✅ Users cannot register with duplicate emails
+- ✅ Only one check-in per day per user
+- ✅ Check-ins allowed only within 100 meters of the gym
+- ✅ Check-in must be validated within 20 minutes
+- ✅ Only admins can validate check-ins
+- ✅ Only admins can register gyms
 
 ---
 
 ## 🛠 Non-Functional Requirements
 
-- [ ] Encrypted passwords
-- [ ] Data persistence using PostgreSQL
-- [ ] Pagination with 20 items per page
-- [ ] JWT authentication
+- ✅ Encrypted passwords
+- ✅ Data persistence using PostgreSQL
+- ✅ Pagination with 20 items per page
+- ✅ JWT authentication
 
 ---
 
