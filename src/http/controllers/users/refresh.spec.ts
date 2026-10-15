@@ -1,6 +1,6 @@
-import { app } from "@/app";
-import request from "supertest";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { app } from '@/app'
+import request from 'supertest'
+import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
 describe('Refresh Token (e2e)', () => {
   beforeAll(async () => {
@@ -12,25 +12,21 @@ describe('Refresh Token (e2e)', () => {
   })
 
   it('should be able to refresh a token', async () => {
-    await request(app.server)
-      .post('/users')
-      .send({
-        name: 'John Doe',
-        email: 'johndoe@example.com',
-        password: '123456',
-      })
+    await request(app.server).post('/users').send({
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      password: '123456',
+    })
 
-    const authResponse = await request(app.server)
-      .post('/sessions')
-      .send({
-        email: 'johndoe@example.com',
-        password: '123456',
-      })
+    const authResponse = await request(app.server).post('/sessions').send({
+      email: 'johndoe@example.com',
+      password: '123456',
+    })
 
     const cookies = authResponse.get('Set-Cookie')
 
     if (!cookies) {
-      throw new Error("No cookies received from /sessions response");
+      throw new Error('No cookies received from /sessions response')
     }
 
     const response = await request(app.server)
@@ -43,7 +39,7 @@ describe('Refresh Token (e2e)', () => {
       token: expect.any(String),
     })
     expect(response.get('Set-Cookie')).toEqual([
-      expect.stringContaining('refreshToken=')
+      expect.stringContaining('refreshToken='),
     ])
   })
 })

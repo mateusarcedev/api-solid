@@ -7,16 +7,16 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     title: z.string(),
     description: z.string().nullable(),
     phone: z.string().nullable(),
-    latitude: z.number().refine(value => {
+    latitude: z.number().refine((value) => {
       return Math.abs(value) <= 90
     }),
-    longitude: z.number().refine(value => {
+    longitude: z.number().refine((value) => {
       return Math.abs(value) <= 180
     }),
   })
 
-  const { title, description, phone, latitude, longitude } = createGymBodySchema.parse(request.body)
-
+  const { title, description, phone, latitude, longitude } =
+    createGymBodySchema.parse(request.body)
 
   const createGymUseCase = makeCreateGymUseCase()
 
@@ -25,7 +25,7 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     description,
     phone,
     latitude,
-    longitude
+    longitude,
   })
 
   return reply.status(201).send()

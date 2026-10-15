@@ -1,6 +1,6 @@
-import { beforeEach, describe, expect, it } from "vitest";
-import { InMemoryGymsRepository } from "../repositories/in-memory/in-memory-gyms-repository";
-import { SearchGymsUseCase } from "./search-gyms";
+import { beforeEach, describe, expect, it } from 'vitest'
+import { InMemoryGymsRepository } from '../repositories/in-memory/in-memory-gyms-repository'
+import { SearchGymsUseCase } from './search-gyms'
 
 let gymsRepository: InMemoryGymsRepository
 let sut: SearchGymsUseCase
@@ -30,13 +30,11 @@ describe('Search Gyms Use Case', () => {
 
     const { gyms } = await sut.execute({
       query: 'Javascript',
-      page: 1
+      page: 1,
     })
 
     expect(gyms).toHaveLength(1)
-    expect(gyms).toEqual([
-      expect.objectContaining({ title: 'Javascript Gym' }),
-    ])
+    expect(gyms).toEqual([expect.objectContaining({ title: 'Javascript Gym' })])
   })
 
   it('should be able to fetch paginated gyms search', async () => {
@@ -52,7 +50,7 @@ describe('Search Gyms Use Case', () => {
 
     const { gyms } = await sut.execute({
       query: 'Typescript',
-      page: 2
+      page: 2,
     })
 
     expect(gyms).toHaveLength(2)
@@ -61,6 +59,4 @@ describe('Search Gyms Use Case', () => {
       expect.objectContaining({ title: 'Typescript Gym 22' }),
     ])
   })
-
 })
-

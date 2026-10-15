@@ -1,8 +1,8 @@
-import { app } from "@/app";
-import { prisma } from "@/lib/prisma";
-import { createAndAuthenticateUser } from "@/utils/test/create-and-authenticate-user";
-import request from "supertest";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { app } from '@/app'
+import { prisma } from '@/lib/prisma'
+import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
+import request from 'supertest'
+import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
 describe('Create Check-in (e2e)', () => {
   beforeAll(async () => {

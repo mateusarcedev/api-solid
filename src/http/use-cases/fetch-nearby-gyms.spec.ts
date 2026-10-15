@@ -1,6 +1,6 @@
-import { beforeEach, describe, expect, it } from "vitest";
-import { InMemoryGymsRepository } from "../repositories/in-memory/in-memory-gyms-repository";
-import { FetchNearbyGymsUseCase } from "./fetch-nearby-gyms";
+import { beforeEach, describe, expect, it } from 'vitest'
+import { InMemoryGymsRepository } from '../repositories/in-memory/in-memory-gyms-repository'
+import { FetchNearbyGymsUseCase } from './fetch-nearby-gyms'
 
 let gymsRepository: InMemoryGymsRepository
 let sut: FetchNearbyGymsUseCase
@@ -34,9 +34,6 @@ describe('Fetch Nearby Gyms Use Case', () => {
     })
 
     expect(gyms).toHaveLength(1)
-    expect(gyms).toEqual([
-      expect.objectContaining({ title: 'Near Gym' }),
-    ])
+    expect(gyms).toEqual([expect.objectContaining({ title: 'Near Gym' })])
   })
 })
-
