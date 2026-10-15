@@ -1,8 +1,8 @@
-import { app } from "@/app";
-import { prisma } from "@/lib/prisma";
-import { createAndAuthenticateUser } from "@/utils/test/create-and-authenticate-user";
-import request from "supertest";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { app } from '@/app'
+import { prisma } from '@/lib/prisma'
+import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
+import request from 'supertest'
+import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
 describe('Check-in History (e2e)', () => {
   beforeAll(async () => {
@@ -32,13 +32,13 @@ describe('Check-in History (e2e)', () => {
       data: [
         {
           gym_id: gym.id,
-          user_id: user.id
+          user_id: user.id,
         },
         {
           gym_id: gym.id,
-          user_id: user.id
+          user_id: user.id,
         },
-      ]
+      ],
     })
 
     const response = await request(app.server)
@@ -50,11 +50,11 @@ describe('Check-in History (e2e)', () => {
     expect(response.body.checkIns).toEqual([
       expect.objectContaining({
         gym_id: gym.id,
-        user_id: user.id
+        user_id: user.id,
       }),
       expect.objectContaining({
         gym_id: gym.id,
-        user_id: user.id
+        user_id: user.id,
       }),
     ])
   })

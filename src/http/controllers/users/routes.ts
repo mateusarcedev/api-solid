@@ -1,9 +1,9 @@
-import { FastifyInstance } from "fastify";
-import { verifyJWT } from "../../middlewares/verify-jwt";
-import { authenticate } from "./authenticate";
-import { profile } from "./profile";
-import { refresh } from "./refresh";
-import { register } from "./register";
+import { FastifyInstance } from 'fastify'
+import { verifyJWT } from '../../middlewares/verify-jwt'
+import { authenticate } from './authenticate'
+import { profile } from './profile'
+import { refresh } from './refresh'
+import { register } from './register'
 
 export async function userRoutes(app: FastifyInstance) {
   app.post('/users', register)

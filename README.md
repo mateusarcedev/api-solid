@@ -1,137 +1,85 @@
-# Gym Check-In App
+# Gym Check-In API
 
-<details>
-  <summary>🇧🇷 Português (pt-BR)</summary>
+[![CI](https://github.com/mateusarcedev/api-solid/actions/workflows/ci.yml/badge.svg)](https://github.com/mateusarcedev/api-solid/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## 📌 Sobre o Projeto
+[English version](README.en.md)
 
-Este projeto foi desenvolvido durante um curso da [Rocketseat](https://www.rocketseat.com.br/), com o objetivo de criar uma aplicação de check-ins em academias. Ao longo do projeto, são aplicados conceitos como:
+> **Projeto de estudo.** Desenvolvido durante o curso de Node.js da [Rocketseat](https://www.rocketseat.com.br/), seguindo a estrutura e os requisitos propostos no curso. É um registro de aprendizado de SOLID, Clean Architecture e TDD, não um produto: não há front-end, deploy nem preocupações de escala.
 
-- SOLID
-- Design Patterns (como Factory Pattern e Repository Pattern)
-- Docker e Docker Compose para orquestração do ambiente
-- Prisma ORM para manipulação do banco de dados PostgreSQL
-- JWT e Refresh Token para autenticação
-- RBAC (Role-Based Access Control) para autorização
-- Testes unitários e E2E com Vitest
-- TDD e Mocking
-- Clean Architecture
+API REST de check-ins em academias (estilo GymPass) com Fastify, Prisma e PostgreSQL.
 
----
+## O que o projeto pratica
 
-## ✅ Funcionalidades
+- **SOLID e Clean Architecture**: casos de uso independentes de framework, com repositórios injetados por interface (`src/http/repositories/`, com implementações Prisma e em memória)
+- **Factory pattern** para montar casos de uso (`src/http/use-cases/factories/`)
+- **TDD**: testes unitários dos casos de uso com repositórios em memória
+- **Testes e2e** das rotas com Vitest e Supertest, cada arquivo em um schema PostgreSQL próprio (`prisma/vitest-environment-prisma/`)
+- **Autenticação JWT** com refresh token em cookie `httpOnly` e **RBAC** (`ADMIN` / `MEMBER`)
+- **Prisma ORM** com migrations, e validação de entrada e de variáveis de ambiente com Zod
 
-- ✅ Cadastro de usuário
-- ✅ Autenticação de usuário
-- ✅ Visualização de perfil de usuário logado
-- ✅ Visualização do número de check-ins realizados
-- ✅ Histórico de check-ins
-- ✅ Busca por academias próximas
-- ✅ Busca por academias por nome
-- ✅ Realizar check-in em uma academia
-- ✅ Validação de check-in de usuários
-- ✅ Cadastro de academias
+## Regras de negócio
 
----
+- Não é possível cadastrar e-mail duplicado
+- Um check-in por dia por usuário
+- Check-in apenas a até 100 m da academia
+- O check-in só pode ser validado até 20 minutos após a criação
+- Apenas administradores validam check-ins e cadastram academias
+- Listagens paginadas com 20 itens por página
 
-## 📜 Regras de Negócio
+## Rotas
 
-- ✅ Não é permitido cadastro com e-mail duplicado
-- ✅ Apenas um check-in por dia por usuário
-- ✅ Check-in apenas se estiver a até 100m da academia
-- ✅ Validação do check-in em até 20 minutos após a criação
-- ✅ Apenas administradores podem validar check-ins
-- ✅ Apenas administradores podem cadastrar academias
+| Método | Rota | Acesso |
+|---|---|---|
+| `POST` | `/users` | público |
+| `POST` | `/sessions` | público |
+| `PATCH` | `/token/refresh` | cookie `refreshToken` |
+| `GET` | `/me` | autenticado |
+| `GET` | `/gyms/search?q=&page=` | autenticado |
+| `GET` | `/gyms/nearby?latitude=&longitude=` | autenticado |
+| `POST` | `/gyms` | `ADMIN` |
+| `POST` | `/gyms/:gymId/check-ins` | autenticado |
+| `GET` | `/check-ins/history?page=` | autenticado |
+| `GET` | `/check-ins/metrics` | autenticado |
+| `PATCH` | `/check-ins/:checkInId/validate` | `ADMIN` |
 
----
+## Como rodar
 
-## 🛠 Requisitos Não Funcionais
+Requer Node.js 20+ (CI em Node 22) e Docker.
 
-- ✅ Senhas criptografadas
-- ✅ Persistência de dados com PostgreSQL
-- ✅ Listagens paginadas com 20 itens por página
-- ✅ Autenticação via JWT
+```bash
+npm ci
+cp .env.example .env        # preencha JWT_SECRET (instrução no arquivo)
+docker compose up -d        # PostgreSQL em localhost:5432
+npm run db:migrate          # aplica as migrations
+npm run dev                 # http://localhost:3333
+```
 
----
+### Testes
 
-## 🚀 Tecnologias Utilizadas
+```bash
+npm test            # unitários (não precisam de banco)
+npm run test:e2e    # precisa do PostgreSQL do docker compose e do .env
+npm run typecheck
+npm run lint
+```
 
-- Node.js
-- Fastify
-- PostgreSQL
-- Prisma ORM
-- Docker / Docker Compose
-- JWT
-- Vitest
-- TypeScript
+O CI roda typecheck, lint, unitários e e2e a cada push na `main` e em pull requests.
 
-</details>
+## Stack
 
----
+Node.js · TypeScript · Fastify 5 · Prisma 6 · PostgreSQL 17 · Zod · JWT (`@fastify/jwt`) · bcryptjs · Vitest · Supertest · tsup
 
-<details>
-  <summary>🇺🇸 English (en-US)</summary>
+## Limitações conhecidas
 
-## 📌 About the Project
+Escolhas herdadas do curso e mantidas de propósito, por serem didáticas:
 
-This project was developed during a [Rocketseat](https://www.rocketseat.com.br/) course. The goal is to create a gym check-in application. Throughout the course, several concepts are put into practice, such as:
+- `verifyUserRole` responde `401` quando o papel é insuficiente (o semanticamente correto seria `403`)
+- Custo do bcrypt em 6 (rápido para os testes) e `JWT_SECRET` sem exigência de tamanho mínimo
+- Sem rate limit, logging externo ou Dockerfile da aplicação
 
-- SOLID principles
-- Design Patterns (like Factory Pattern and Repository Pattern)
-- Docker and Docker Compose for environment setup
-- Prisma ORM to interact with a PostgreSQL database
-- JWT and Refresh Token for authentication
-- RBAC (Role-Based Access Control) for authorization
-- Unit and E2E tests with Vitest
-- TDD and Mocking
-- Clean Architecture
+O `npm audit` ainda aponta vulnerabilidades em ferramentas de desenvolvimento (Vitest e a config do ESLint da Rocketseat), cuja correção exige atualizações major. As dependências de produção estão sem vulnerabilidades conhecidas.
 
----
+## Licença
 
-## ✅ Features
-
-- ✅ User registration
-- ✅ User authentication
-- ✅ View logged-in user profile
-- ✅ View total number of check-ins
-- ✅ View check-in history
-- ✅ Search gyms nearby
-- ✅ Search gyms by name
-- ✅ Perform a gym check-in
-- ✅ Validate user check-ins
-- ✅ Register gyms
-
----
-
-## 📜 Business Rules
-
-- ✅ Users cannot register with duplicate emails
-- ✅ Only one check-in per day per user
-- ✅ Check-ins allowed only within 100 meters of the gym
-- ✅ Check-in must be validated within 20 minutes
-- ✅ Only admins can validate check-ins
-- ✅ Only admins can register gyms
-
----
-
-## 🛠 Non-Functional Requirements
-
-- ✅ Encrypted passwords
-- ✅ Data persistence using PostgreSQL
-- ✅ Pagination with 20 items per page
-- ✅ JWT authentication
-
----
-
-## 🚀 Tech Stack
-
-- Node.js
-- Fastify
-- PostgreSQL
-- Prisma ORM
-- Docker / Docker Compose
-- JWT
-- Vitest
-- TypeScript
-
-</details>
+[MIT](LICENSE) © Mateus Arce. O conteúdo e os requisitos do curso pertencem à Rocketseat.

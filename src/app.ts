@@ -15,8 +15,8 @@ app.register(fastifyJwt, {
     signed: false,
   },
   sign: {
-    expiresIn: '10m'
-  }
+    expiresIn: '10m',
+  },
 })
 
 app.register(fastifyCookie)
@@ -39,6 +39,6 @@ app.setErrorHandler((error, _, reply) => {
   }
 
   return reply.status(500).send({
-    message: 'Internal server error.'
+    message: 'Internal server error.',
   })
 })

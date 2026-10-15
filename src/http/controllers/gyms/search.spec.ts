@@ -1,7 +1,7 @@
-import { app } from "@/app";
-import { createAndAuthenticateUser } from "@/utils/test/create-and-authenticate-user";
-import request from "supertest";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { app } from '@/app'
+import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
+import request from 'supertest'
+import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
 describe('Search Gyms (e2e)', () => {
   beforeAll(async () => {
@@ -40,7 +40,7 @@ describe('Search Gyms (e2e)', () => {
     const response = await request(app.server)
       .get('/gyms/search')
       .query({
-        q: 'Javascript'
+        q: 'Javascript',
       })
       .set('Authorization', `Bearer ${token}`)
       .send()
@@ -49,8 +49,8 @@ describe('Search Gyms (e2e)', () => {
     expect(response.body.gyms).toHaveLength(1)
     expect(response.body.gyms).toEqual([
       expect.objectContaining({
-        title: 'Javascript Gym'
-      })
+        title: 'Javascript Gym',
+      }),
     ])
   })
 })

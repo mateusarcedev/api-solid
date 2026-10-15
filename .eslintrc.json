@@ -1,5 +1,20 @@
 {
   "extends": [
     "@rocketseat/eslint-config/node"
-  ]
+  ],
+  "rules": {
+    "no-useless-constructor": "off",
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "password_hash",
+          "created_at",
+          "validated_at",
+          "user_id",
+          "gym_id"
+        ]
+      }
+    ]
+  }
 }

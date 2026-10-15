@@ -1,10 +1,10 @@
-import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
-import { CheckIn } from "@prisma/client";
-import { CheckInsRepository } from "../repositories/check-ins-repository";
-import { GymsRepository } from "../repositories/gyms-repository";
-import { MaxDistanceError } from "./errors/max-distance-error";
-import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
-import { ResourceNotFoundError } from "./errors/resource-not-exists";
+import { getDistanceBetweenCoordinates } from '@/utils/get-distance-between-coordinates'
+import { CheckIn } from '@prisma/client'
+import { CheckInsRepository } from '../repositories/check-ins-repository'
+import { GymsRepository } from '../repositories/gyms-repository'
+import { MaxDistanceError } from './errors/max-distance-error'
+import { MaxNumberOfCheckInsError } from './errors/max-number-of-check-ins-error'
+import { ResourceNotFoundError } from './errors/resource-not-exists'
 
 interface CheckInUseCaseRequest {
   userId: string
@@ -20,8 +20,8 @@ interface CheckInUseCaseResponse {
 export class CheckInUseCase {
   constructor(
     private checkInsRepository: CheckInsRepository,
-    private gymsRepository: GymsRepository
-  ) { }
+    private gymsRepository: GymsRepository,
+  ) {}
 
   async execute({
     userId,
@@ -37,7 +37,10 @@ export class CheckInUseCase {
 
     const distance = getDistanceBetweenCoordinates(
       { latitude: userLatitude, longitude: userLongitude },
-      { latitude: gym.latitude.toNumber(), longitude: gym.longitude.toNumber() }
+      {
+        latitude: gym.latitude.toNumber(),
+        longitude: gym.longitude.toNumber(),
+      },
     )
 
     const MAX_DISTANCE_IN_KILOMETERS = 0.1
@@ -48,7 +51,7 @@ export class CheckInUseCase {
 
     const checkInOnSameDay = await this.checkInsRepository.findByUserIdOnDate(
       userId,
-      new Date()
+      new Date(),
     )
 
     if (checkInOnSameDay) {
@@ -57,7 +60,7 @@ export class CheckInUseCase {
 
     const checkIn = await this.checkInsRepository.create({
       user_id: userId,
-      gym_id: gymId
+      gym_id: gymId,
     })
 
     return {
